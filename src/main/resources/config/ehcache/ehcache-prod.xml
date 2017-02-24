@@ -20,5 +20,7 @@
 
     <cache alias="com.tadpole.northmuse.domain.User.persistentTokens" uses-template="simple"/>
 
+    <cache alias="com.tadpole.northmuse.domain.WebSite" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>

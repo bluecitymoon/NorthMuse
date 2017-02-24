@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rootUrl",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170224075440",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "web_site",
+    "pagination": "pagination"
+}
