@@ -1,5 +1,5 @@
 
-<div>
+<div class="fixed-fluid">
     <jhi-alert-error></jhi-alert-error>
 
     <div class="panel">
@@ -15,6 +15,25 @@
         </div>
     </div>
 
-    <hr>
+    <div ng-if="vm.log.entries.length > 0" class="panel panel-dark panel-colorful" style="margin-bottom: -1px; font-size: xx-small">
+        <div class="panel-body" style="padding: 5px">
+            <div class="col-md-6 text-left text-warning text-bold text-2x">
+                URL <small style="color: white">({{vm.log.entries.length}}) </small>
+            </div>
+            <div class="col-md-6 text-right text-warning text-bold text-2x">
+                操作
+            </div>
 
+        </div>
+    </div>
+    <div ng-if="vm.log.entries.length > 0" class="panel" ng-repeat="l in vm.log.entries" style="margin-bottom: -1px; font-size: xx-small">
+        <div class="panel-body" style="padding: 5px" >
+
+            {{l.request.url}}
+
+            <div class="btn-group btn-group-xs" style="float: right">
+                <button class="btn btn-info btn-xs bottom-right">内容</button>
+            </div>
+        </div>
+    </div>
 </div>

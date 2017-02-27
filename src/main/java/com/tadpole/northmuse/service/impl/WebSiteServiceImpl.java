@@ -107,6 +107,8 @@ public class WebSiteServiceImpl implements WebSiteService{
     @Override
     public de.sstoehr.harreader.model.HarLog analysis(WebSite webSite) {
 
+        // TODO: 2017/2/27 not analysis in dev
+        /*
         String url = webSite.getRootUrl();
 
         Proxy seleniumProxy = ClientUtil.createSeleniumProxy(browserMobProxyServer);
@@ -123,22 +125,26 @@ public class WebSiteServiceImpl implements WebSiteService{
         driver.get(url);
 
         Har har = browserMobProxyServer.getHar();
+*/
+       // String harFileName = UUID.randomUUID().toString() + webSite.getId() + ".har";
+        String harFileName = "a33a80fe-0f8c-4b02-b5c7-ab985beb04a91.har";
 
-        String harFileName = UUID.randomUUID().toString() + webSite.getId() + ".har";
+        /*
         try {
             har.writeTo(new File(harFileName));
 
         } catch (IOException e) {
-            // TODO: 2017/2/27  
+            // TODO: 2017/2/27
         }
 
+*/
         HarReader harReader = new HarReader();
 
         de.sstoehr.harreader.model.Har harResult = null;
         try {
             harResult = harReader.readFromFile(new File(harFileName));
         } catch (HarReaderException e) {
-            // TODO: 2017/2/27  
+            // TODO: 2017/2/27
         }
 
         return harResult.getLog();

@@ -13,9 +13,20 @@
         vm.webSite = entity;
         vm.previousState = previousState.name;
 
+        vm.log = {};
         vm.analysisWebSite = function () {
 
-            WebSite.analysisWebSite({id: vm.webSite.id});
+            WebSite.analysisWebSite({id: vm.webSite.id}).$promise.then(success, fail);
+
+            function success(data) {
+
+                vm.log = data;
+            }
+
+            function fail() {
+
+                //TODO
+            }
 
         };
 
