@@ -1,9 +1,10 @@
 package com.tadpole.northmuse.service;
 
 import com.tadpole.northmuse.domain.WebSite;
+import de.sstoehr.harreader.model.Har;
+import de.sstoehr.harreader.model.HarLog;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import java.util.List;
 
 /**
  * Service Interface for managing WebSite.
@@ -20,7 +21,7 @@ public interface WebSiteService {
 
     /**
      *  Get all the webSites.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
@@ -40,4 +41,7 @@ public interface WebSiteService {
      *  @param id the id of the entity
      */
     void delete(Long id);
+
+    HarLog analysis(WebSite webSite);
+
 }
