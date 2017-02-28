@@ -44,7 +44,8 @@
             html: true,
             json: true,
             page: true,
-            picture: false
+            picture: false,
+            other: false
         };
 
         $scope.checkResults = [];
@@ -78,7 +79,11 @@
                 } else {
 
                     //just show if no request type
-                    $scope.entries.push(entry);
+
+                    if ($scope.extensionFilter.other == true) {
+
+                        $scope.entries.push(entry);
+                    }
                 }
 
             });
