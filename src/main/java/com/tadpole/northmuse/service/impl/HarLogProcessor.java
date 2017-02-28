@@ -35,7 +35,7 @@ public class HarLogProcessor {
 
                 resourceTarget.setRequestType(RequestType.JS);
 
-            } else if (requestUrl.endsWith(".png") || requestUrl.endsWith(".jpg") || requestUrl.endsWith("jpeg")) {
+            } else if (requestUrl.endsWith(".png") || requestUrl.endsWith(".jpg") || requestUrl.endsWith("jpeg") || requestUrl.endsWith(".ico")) {
                 resourceTarget.setRequestType(RequestType.PICTURE);
             }
 
@@ -44,7 +44,12 @@ public class HarLogProcessor {
             if (mimeType.contains("json")) {
                 resourceTarget.setRequestType(RequestType.JSON);
             } else if (mimeType.contains("html")) {
-                resourceTarget.setRequestType(RequestType.HTML);
+
+                RequestType requestType = resourceTarget.getRequestType();
+                if (requestType == null || requestType != RequestType.JS) {
+
+                    resourceTarget.setRequestType(RequestType.HTML);
+                }
             }
 
             targets.add(resourceTarget);

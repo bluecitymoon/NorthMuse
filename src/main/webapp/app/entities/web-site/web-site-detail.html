@@ -16,20 +16,20 @@
 
     </div>
 
-    <div class="panel" ng-if="vm.log.entries.length > 0">
+    <div class="panel">
         <div class="btn-group">
-            <label class="btn btn-primary" ng-model="extensionFilter.css" uib-btn-checkbox>CSS</label>
-            <label class="btn btn-primary" ng-model="extensionFilter.js" uib-btn-checkbox>JS</label>
-            <label class="btn btn-primary" ng-model="extensionFilter.html" uib-btn-checkbox>HTML</label>
-            <label class="btn btn-primary" ng-model="extensionFilter.picture" uib-btn-checkbox>图片</label>
-            <label class="btn btn-primary" ng-model="extensionFilter.json" uib-btn-checkbox>Json</label>
+            <label class="btn btn-danger" ng-model="extensionFilter.css" uib-btn-checkbox>CSS</label>
+            <label class="btn btn-danger" ng-model="extensionFilter.js" uib-btn-checkbox>JS</label>
+            <label class="btn btn-danger" ng-model="extensionFilter.html" uib-btn-checkbox>HTML</label>
+            <label class="btn btn-danger" ng-model="extensionFilter.picture" uib-btn-checkbox>图片</label>
+            <label class="btn btn-danger" ng-model="extensionFilter.json" uib-btn-checkbox>Json</label>
         </div>
     </div>
 
-    <div ng-if="vm.log.entries.length > 0" class="panel panel-dark panel-colorful" style="margin-bottom: -1px; font-size: xx-small">
+    <div ng-if="entries.length > 0" class="panel panel-dark panel-colorful" style="margin-bottom: -1px; font-size: xx-small">
         <div class="panel-body" style="padding: 5px">
             <div class="col-md-6 text-left text-warning text-bold text-2x">
-                URL <small style="color: white">({{vm.log.entries.length}}) </small>
+                URL <small style="color: white">({{entries.length}}) </small>
             </div>
             <div class="col-md-6 text-right text-warning text-bold text-2x">
                 操作
@@ -37,7 +37,7 @@
 
         </div>
     </div>
-    <div ng-if="vm.log.entries.length > 0" class="panel" ng-repeat="l in vm.log.entries" style="margin-bottom: -1px; padding: 5px; font-size: xx-small">
+    <div ng-if="entries.length > 0" class="panel" ng-repeat="l in entries" style="margin-bottom: -1px; padding: 5px; font-size: xx-small">
         <div class="panel-heading">
             <div class="panel-title">
 
