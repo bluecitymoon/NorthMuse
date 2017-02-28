@@ -3,6 +3,7 @@ package com.tadpole.northmuse.web.rest;
 import com.codahale.metrics.annotation.Timed;
 import com.tadpole.northmuse.domain.WebSite;
 import com.tadpole.northmuse.service.WebSiteService;
+import com.tadpole.northmuse.vo.AnalysisResponse;
 import com.tadpole.northmuse.web.rest.util.HeaderUtil;
 import com.tadpole.northmuse.web.rest.util.PaginationUtil;
 import de.sstoehr.harreader.model.HarLog;
@@ -134,11 +135,11 @@ public class WebSiteResource {
 
     @GetMapping("/web-sites/analysis/{id}")
     @Timed
-    public ResponseEntity<HarLog> analysisWebSite(@PathVariable Long id) {
+    public ResponseEntity<AnalysisResponse> analysisWebSite(@PathVariable Long id) {
         log.debug("REST request to get WebSite : {}", id);
         WebSite webSite = webSiteService.findOne(id);
 
-        HarLog log = webSiteService.analysis(webSite);
+        AnalysisResponse log = webSiteService.analysis(webSite);
 
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(log));
     }

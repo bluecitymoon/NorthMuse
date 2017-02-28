@@ -6,6 +6,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.tadpole.northmuse.service.WebSiteService;
 import com.tadpole.northmuse.domain.WebSite;
 import com.tadpole.northmuse.repository.WebSiteRepository;
+import com.tadpole.northmuse.vo.AnalysisResponse;
 import de.sstoehr.harreader.HarReader;
 import de.sstoehr.harreader.HarReaderException;
 import net.lightbody.bmp.BrowserMobProxyServer;
@@ -105,7 +106,7 @@ public class WebSiteServiceImpl implements WebSiteService{
     }
 
     @Override
-    public de.sstoehr.harreader.model.HarLog analysis(WebSite webSite) {
+    public AnalysisResponse analysis(WebSite webSite) {
 
         // TODO: 2017/2/27 not analysis in dev
         /*
@@ -146,7 +147,8 @@ public class WebSiteServiceImpl implements WebSiteService{
         } catch (HarReaderException e) {
             // TODO: 2017/2/27
         }
+        AnalysisResponse result = HarLogProcessor.process(harResult.getLog());
 
-        return harResult.getLog();
+        return result;
     }
 }

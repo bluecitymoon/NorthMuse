@@ -6,12 +6,23 @@
         <div class="panel-heading">
             <div class="panel-control">
 
-                <button class="btn btn-default" data-target="#demo-panel-ref" data-toggle="panel-overlay" ng-click="vm.analysisWebSite(vm.webSite)">
+                <button class="btn btn-default" ng-click="vm.analysisWebSite(vm.webSite)">
                     <i class="glyphicon glyphicon-refresh"></i> 分析
                 </button>
 
             </div>
             <h3 class="panel-title">{{vm.webSite.name}} {{vm.webSite.rootUrl}}</h3>
+        </div>
+
+    </div>
+
+    <div class="panel" ng-if="vm.log.entries.length > 0">
+        <div class="btn-group">
+            <label class="btn btn-primary" ng-model="extensionFilter.css" uib-btn-checkbox>CSS</label>
+            <label class="btn btn-primary" ng-model="extensionFilter.js" uib-btn-checkbox>JS</label>
+            <label class="btn btn-primary" ng-model="extensionFilter.html" uib-btn-checkbox>HTML</label>
+            <label class="btn btn-primary" ng-model="extensionFilter.picture" uib-btn-checkbox>图片</label>
+            <label class="btn btn-primary" ng-model="extensionFilter.json" uib-btn-checkbox>Json</label>
         </div>
     </div>
 
@@ -26,14 +37,23 @@
 
         </div>
     </div>
-    <div ng-if="vm.log.entries.length > 0" class="panel" ng-repeat="l in vm.log.entries" style="margin-bottom: -1px; font-size: xx-small">
-        <div class="panel-body" style="padding: 5px" >
+    <div ng-if="vm.log.entries.length > 0" class="panel" ng-repeat="l in vm.log.entries" style="margin-bottom: -1px; padding: 5px; font-size: xx-small">
+        <div class="panel-heading">
+            <div class="panel-title">
 
-            {{l.request.url}}
+                <div class="panel-control">
 
-            <div class="btn-group btn-group-xs" style="float: right">
-                <button class="btn btn-info btn-xs bottom-right">内容</button>
+                    <div class="btn-group btn-group-xs" style="float: right">
+                        <button class="btn btn-info btn-xs bottom-right" ng-click="vm.toggleDetail(l)">内容</button>
+                    </div>
+                </div>
+                {{l.request.url}}
             </div>
+
+        </div>
+        <div class="panel-body" ng-if="l.showDetail">
+
+            {{l.response.content.text}}
         </div>
     </div>
 </div>
