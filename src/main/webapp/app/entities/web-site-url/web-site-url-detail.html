@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="northMuseApp.webSiteUrl.detail.title">Web Site Url</span> {{vm.webSiteUrl.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="northMuseApp.webSiteUrl.rootAddress">Root Address</span></dt>
+        <dd>
+            <span>{{vm.webSiteUrl.rootAddress}}</span>
+        </dd>
+        <dt><span data-translate="northMuseApp.webSiteUrl.fullAddress">Full Address</span></dt>
+        <dd>
+            <span>{{vm.webSiteUrl.fullAddress}}</span>
+        </dd>
+        <dt><span data-translate="northMuseApp.webSiteUrl.name">Name</span></dt>
+        <dd>
+            <span>{{vm.webSiteUrl.name}}</span>
+        </dd>
+        <dt><span data-translate="northMuseApp.webSiteUrl.webSite">Web Site</span></dt>
+        <dd>
+            <a ui-sref="web-site-detail({id:vm.webSiteUrl.webSite.id})">{{vm.webSiteUrl.webSite.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="web-site-url-detail.edit({id:vm.webSiteUrl.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

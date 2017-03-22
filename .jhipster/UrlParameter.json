@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "webSiteUrl",
+            "otherEntityName": "webSiteUrl",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "paramKey",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paramValue",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "defaultValue",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170322081525",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "url_parameter",
+    "pagination": "pagination"
+}

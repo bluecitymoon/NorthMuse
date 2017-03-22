@@ -8,6 +8,8 @@
             "entities": {
                 "main": "實體",
                 "webSite": "Web Site",
+                "webSiteUrl": "Web Site Url",
+                "urlParameter": "Url Parameter",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

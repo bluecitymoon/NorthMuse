@@ -99,6 +99,11 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/de.sstoehr/har-reader -->
         <dependency>
             <groupId>de.sstoehr</groupId>

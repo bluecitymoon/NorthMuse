@@ -5,9 +5,9 @@
         .module('northMuseApp')
         .controller('WebSiteDetailController', WebSiteDetailController);
 
-    WebSiteDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'WebSite'];
+    WebSiteDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'WebSite', 'WebSiteUrl'];
 
-    function WebSiteDetailController($scope, $rootScope, $stateParams, previousState, entity, WebSite) {
+    function WebSiteDetailController($scope, $rootScope, $stateParams, previousState, entity, WebSite, WebSiteUrl) {
         var vm = this;
 
         vm.webSite = entity;
@@ -36,6 +36,15 @@
 
         vm.toggleDetail = function (l) {
             l.showDetail = !l.showDetail;
+        };
+
+        vm.saveUrl = function (l) {
+
+            console.debug(l);
+            var webSiteUrl = {
+
+            }
+
         };
 
         $scope.extensionFilter = {

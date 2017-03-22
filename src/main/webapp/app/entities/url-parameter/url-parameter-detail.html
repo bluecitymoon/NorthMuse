@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="northMuseApp.urlParameter.detail.title">Url Parameter</span> {{vm.urlParameter.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="northMuseApp.urlParameter.paramKey">Param Key</span></dt>
+        <dd>
+            <span>{{vm.urlParameter.paramKey}}</span>
+        </dd>
+        <dt><span data-translate="northMuseApp.urlParameter.paramValue">Param Value</span></dt>
+        <dd>
+            <span>{{vm.urlParameter.paramValue}}</span>
+        </dd>
+        <dt><span data-translate="northMuseApp.urlParameter.defaultValue">Default Value</span></dt>
+        <dd>
+            <span>{{vm.urlParameter.defaultValue}}</span>
+        </dd>
+        <dt><span data-translate="northMuseApp.urlParameter.webSiteUrl">Web Site Url</span></dt>
+        <dd>
+            <a ui-sref="web-site-url-detail({id:vm.urlParameter.webSiteUrl.id})">{{vm.urlParameter.webSiteUrl.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="url-parameter-detail.edit({id:vm.urlParameter.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

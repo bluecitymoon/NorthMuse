@@ -1,0 +1,24 @@
+{
+    "northMuseApp": {
+        "webSiteUrl" : {
+            "home": {
+                "title": "Web Site Urls",
+                "createLabel": "建立一筆新的 Web Site Url",
+                "createOrEditLabel": "建立或編輯 Web Site Url"
+            },
+            "created": "新的 Web Site Url 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Web Site Url 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Web Site Url 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Web Site Url {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Web Site Url"
+            },
+            "rootAddress": "Root Address",
+            "fullAddress": "Full Address",
+            "name": "Name",
+            "webSite": "Web Site"
+        }
+    }
+}

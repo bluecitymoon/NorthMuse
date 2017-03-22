@@ -1,0 +1,24 @@
+{
+    "northMuseApp": {
+        "urlParameter" : {
+            "home": {
+                "title": "Url Parameters",
+                "createLabel": "Create a new Url Parameter",
+                "createOrEditLabel": "Create or edit a Url Parameter"
+            },
+            "created": "A new Url Parameter is created with identifier {{ param }}",
+            "updated": "A Url Parameter is updated with identifier {{ param }}",
+            "deleted": "A Url Parameter is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Url Parameter {{ id }}?"
+            },
+            "detail": {
+                "title": "Url Parameter"
+            },
+            "paramKey": "Param Key",
+            "paramValue": "Param Value",
+            "defaultValue": "Default Value",
+            "webSiteUrl": "Web Site Url"
+        }
+    }
+}

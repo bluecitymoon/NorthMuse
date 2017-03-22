@@ -1,0 +1,24 @@
+{
+    "northMuseApp": {
+        "webSiteUrl" : {
+            "home": {
+                "title": "Web Site Urls",
+                "createLabel": "Create a new Web Site Url",
+                "createOrEditLabel": "Create or edit a Web Site Url"
+            },
+            "created": "A new Web Site Url is created with identifier {{ param }}",
+            "updated": "A Web Site Url is updated with identifier {{ param }}",
+            "deleted": "A Web Site Url is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Web Site Url {{ id }}?"
+            },
+            "detail": {
+                "title": "Web Site Url"
+            },
+            "rootAddress": "Root Address",
+            "fullAddress": "Full Address",
+            "name": "Name",
+            "webSite": "Web Site"
+        }
+    }
+}

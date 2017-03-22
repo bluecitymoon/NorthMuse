@@ -42,10 +42,18 @@
         <div class="panel-heading">
             <div class="panel-title">
 
-                <div class="panel-control">
+                <div class="panel-control" style="float: right">
 
-                    <div class="btn-group btn-group-xs" style="float: right">
-                        <button class="btn btn-info btn-xs bottom-right" ng-click="vm.toggleDetail(l)">内容</button>
+                    <!--<div class="col-md-9">-->
+                        <!--<input type="text" class="form-control" name="name" id="field_name" ng-model="l.urlName" placeholder=""/>-->
+                    <!--</div>-->
+
+                    <div class="btn-group btn-group-xs" >
+                        <button class="btn btn-primary btn-xs bottom-right" ng-click="vm.saveUrl(l)">保存</button>
+                    </div>
+
+                    <div class="btn-group btn-group-xs">
+                        <button class="btn btn-info btn-xs bottom-right" ng-click="vm.toggleDetail(l)">Response</button>
                     </div>
                 </div>
                 {{l.request.url}}

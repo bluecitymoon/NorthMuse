@@ -1,0 +1,68 @@
+<div>
+    <h2 data-translate="northMuseApp.urlParameter.home.title">Url Parameters</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="url-parameter.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="northMuseApp.urlParameter.home.createLabel">
+                        Create new Url Parameter
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paramKey"><span data-translate="northMuseApp.urlParameter.paramKey">Param Key</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paramValue"><span data-translate="northMuseApp.urlParameter.paramValue">Param Value</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="defaultValue"><span data-translate="northMuseApp.urlParameter.defaultValue">Default Value</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="webSiteUrl.name"><span data-translate="northMuseApp.urlParameter.webSiteUrl">Web Site Url</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="urlParameter in vm.urlParameters track by urlParameter.id">
+                    <td><a ui-sref="url-parameter-detail({id:urlParameter.id})">{{urlParameter.id}}</a></td>
+                    <td>{{urlParameter.paramKey}}</td>
+                    <td>{{urlParameter.paramValue}}</td>
+                    <td>{{urlParameter.defaultValue}}</td>
+                    <td>
+                        <a ui-sref="web-site-url-detail({id:urlParameter.webSiteUrl.id})">{{urlParameter.webSiteUrl.name}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="url-parameter-detail({id:urlParameter.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="url-parameter.edit({id:urlParameter.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="url-parameter.delete({id:urlParameter.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

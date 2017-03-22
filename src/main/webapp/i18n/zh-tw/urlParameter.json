@@ -1,0 +1,24 @@
+{
+    "northMuseApp": {
+        "urlParameter" : {
+            "home": {
+                "title": "Url Parameters",
+                "createLabel": "建立一筆新的 Url Parameter",
+                "createOrEditLabel": "建立或編輯 Url Parameter"
+            },
+            "created": "新的 Url Parameter 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Url Parameter 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Url Parameter 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Url Parameter {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Url Parameter"
+            },
+            "paramKey": "Param Key",
+            "paramValue": "Param Value",
+            "defaultValue": "Default Value",
+            "webSiteUrl": "Web Site Url"
+        }
+    }
+}

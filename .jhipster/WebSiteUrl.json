@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "webSite",
+            "otherEntityName": "webSite",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "rootAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fullAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170322080858",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "web_site_url",
+    "pagination": "pagination"
+}

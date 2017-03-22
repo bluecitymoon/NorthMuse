@@ -6,6 +6,8 @@ import com.tadpole.northmuse.vo.ResourceTarget;
 import de.sstoehr.harreader.model.HarEntry;
 import de.sstoehr.harreader.model.HarLog;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +39,16 @@ public class HarLogProcessor {
 
             } else if (requestUrl.endsWith(".png") || requestUrl.endsWith(".jpg") || requestUrl.endsWith("jpeg") || requestUrl.endsWith(".ico")) {
                 resourceTarget.setRequestType(RequestType.PICTURE);
+            }
+
+            try {
+                URL requestRealUrl = new URL(requestUrl);
+
+                String path = requestRealUrl.getPath();
+                resourceTarget.setUrlPath(path);
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
             }
 
             String mimeType = harEntry.getResponse().getContent().getMimeType();

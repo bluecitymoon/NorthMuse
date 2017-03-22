@@ -20,5 +20,6 @@ public class ResourceTarget {
     private HarTiming timings;
     private String serverIPAddress;
     private RequestType requestType;
+    private String urlPath;
 
 }

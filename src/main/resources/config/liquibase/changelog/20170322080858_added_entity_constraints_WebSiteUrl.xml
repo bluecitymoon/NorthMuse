@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity WebSiteUrl.
+    -->
+    <changeSet id="20170322080858-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="web_site_id"
+                                 baseTableName="web_site_url"
+                                 constraintName="fk_web_site_url_web_site_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="web_site"/>
+
+    </changeSet>
+</databaseChangeLog>
