@@ -1,39 +1,46 @@
 
+<jhi-alert></jhi-alert>
 <div>
-    <h2><span data-translate="northMuseApp.robot.detail.title">Robot</span> {{vm.robot.id}}</h2>
-    <hr>
-    <jhi-alert-error></jhi-alert-error>
-    <dl class="row jh-entity-details">
-        <dt><span data-translate="northMuseApp.robot.name">Name</span></dt>
-        <dd>
-            <span>{{vm.robot.name}}</span>
-        </dd>
-        <dt><span data-translate="northMuseApp.robot.rDescription">R Description</span></dt>
-        <dd>
+    <div class="panel">
+        <div class="panel-heading">
+            <div class="panel-control">
+
+                <button class="btn btn-primary">启动 &nbsp;<i class="glyphicon glyphicon-play-circle icon-lg"></i></button>
+
+
+            </div>
+            <h3 class="panel-title">{{vm.robot.name}}<i class="glyphicon glyphicon-ok text-success" ng-if="vm.robot.active"></i> <i class="glyphicon glyphicon-remove text-success" ng-if="!vm.robot.active"></i></h3>
+        </div>
+        <div class="panel-body">
+
             <span>{{vm.robot.rDescription}}</span>
-        </dd>
-        <dt><span data-translate="northMuseApp.robot.active">Active</span></dt>
-        <dd>
-            <span>{{vm.robot.active}}</span>
-        </dd>
-        <dt><span data-translate="northMuseApp.robot.createDate">Create Date</span></dt>
-        <dd>
-            <span>{{vm.robot.createDate | date:'mediumDate'}}</span>
-        </dd>
-        <dt><span data-translate="northMuseApp.robot.webSiteUrl">Web Site Url</span></dt>
-        <dd>
-            <a ui-sref="web-site-url-detail({id:vm.robot.webSiteUrl.id})">{{vm.robot.webSiteUrl.name}}</a>
-        </dd>
-    </dl>
 
-    <button type="submit"
-            ui-sref="{{ vm.previousState }}"
-            class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
-    </button>
+            <hr>
 
-    <button type="button" ui-sref="robot-detail.edit({id:vm.robot.id})" class="btn btn-primary">
-        <span class="glyphicon glyphicon-pencil"></span>
-        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
-    </button>
+            <div class="panel panel-dark panel-colorful">
+
+                <div class="pad-all">
+
+                    <p class="mar-no">
+                        <span class="pull-right text-bold">{{vm.robot.webSiteUrl.rootAddress}}</span>
+                        根路径
+                    </p>
+                    <p class="mar-no">
+                        <span class="pull-right text-bold"><a href="{{vm.robot.webSiteUrl.fullAddress}}" target="_blank">{{vm.robot.webSiteUrl.fullAddress}}</a></span>
+                        全路径
+                    </p>
+                    <p class="mar-no">
+                        <span class="pull-right text-bold">{{vm.robot.webSiteUrl.name}}</span>
+                        名称
+                    </p>
+                    <p class="mar-no">
+                        <span class="pull-right text-bold">{{vm.robot.webSiteUrl.webSite.name}}</span>
+                        网站名称
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
+
