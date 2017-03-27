@@ -10,6 +10,7 @@
                 "webSite": "Web Site",
                 "webSiteUrl": "Web Site Url",
                 "urlParameter": "Url Parameter",
+                "robot": "Robot",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

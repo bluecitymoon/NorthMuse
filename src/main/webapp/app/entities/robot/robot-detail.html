@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="northMuseApp.robot.detail.title">Robot</span> {{vm.robot.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="northMuseApp.robot.name">Name</span></dt>
+        <dd>
+            <span>{{vm.robot.name}}</span>
+        </dd>
+        <dt><span data-translate="northMuseApp.robot.rDescription">R Description</span></dt>
+        <dd>
+            <span>{{vm.robot.rDescription}}</span>
+        </dd>
+        <dt><span data-translate="northMuseApp.robot.active">Active</span></dt>
+        <dd>
+            <span>{{vm.robot.active}}</span>
+        </dd>
+        <dt><span data-translate="northMuseApp.robot.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{vm.robot.createDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="northMuseApp.robot.webSiteUrl">Web Site Url</span></dt>
+        <dd>
+            <a ui-sref="web-site-url-detail({id:vm.robot.webSiteUrl.id})">{{vm.robot.webSiteUrl.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="robot-detail.edit({id:vm.robot.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
