@@ -37,6 +37,9 @@ public class Robot implements Serializable {
     @ManyToOne
     private WebSiteUrl webSiteUrl;
 
+    @ManyToOne
+    private WebService webService;
+
     public Long getId() {
         return id;
     }
@@ -108,6 +111,19 @@ public class Robot implements Serializable {
 
     public void setWebSiteUrl(WebSiteUrl webSiteUrl) {
         this.webSiteUrl = webSiteUrl;
+    }
+
+    public WebService getWebService() {
+        return webService;
+    }
+
+    public Robot webService(WebService webService) {
+        this.webService = webService;
+        return this;
+    }
+
+    public void setWebService(WebService webService) {
+        this.webService = webService;
     }
 
     @Override

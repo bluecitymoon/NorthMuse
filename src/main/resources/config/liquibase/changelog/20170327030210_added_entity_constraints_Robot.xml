@@ -14,5 +14,11 @@
                                  referencedColumnNames="id"
                                  referencedTableName="web_site_url"/>
 
+        <addForeignKeyConstraint baseColumnNames="web_service_id"
+                                 baseTableName="robot"
+                                 constraintName="fk_robot_web_service_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="web_service"/>
+
     </changeSet>
 </databaseChangeLog>

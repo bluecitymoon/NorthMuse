@@ -19,7 +19,8 @@
             "rDescription": "R Description",
             "active": "Active",
             "createDate": "Create Date",
-            "webSiteUrl": "Web Site Url"
+            "webSiteUrl": "Web Site Url",
+            "webService": "Web Service"
         }
     }
 }

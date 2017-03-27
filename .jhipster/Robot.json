@@ -6,6 +6,12 @@
             "otherEntityName": "webSiteUrl",
             "relationshipType": "many-to-one",
             "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "webService",
+            "otherEntityName": "webService",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
         }
     ],
     "fields": [

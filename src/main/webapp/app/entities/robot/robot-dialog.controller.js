@@ -5,9 +5,9 @@
         .module('northMuseApp')
         .controller('RobotDialogController', RobotDialogController);
 
-    RobotDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Robot', 'WebSiteUrl'];
+    RobotDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Robot', 'WebSiteUrl', 'WebService'];
 
-    function RobotDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Robot, WebSiteUrl) {
+    function RobotDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Robot, WebSiteUrl, WebService) {
         var vm = this;
 
         vm.robot = entity;
@@ -16,6 +16,7 @@
         vm.openCalendar = openCalendar;
         vm.save = save;
         vm.websiteurls = WebSiteUrl.query();
+        vm.webservices = WebService.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
