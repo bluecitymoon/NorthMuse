@@ -1,7 +1,9 @@
 package com.tadpole.northmuse.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -17,6 +19,8 @@ import java.util.Objects;
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class DouBanMovieTag implements Serializable {
 
     private static final long serialVersionUID = 1L;
