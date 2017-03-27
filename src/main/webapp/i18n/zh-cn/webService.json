@@ -1,0 +1,23 @@
+{
+    "northMuseApp": {
+        "webService" : {
+            "home": {
+                "title": "Web Services",
+                "createLabel": "Create a new Web Service",
+                "createOrEditLabel": "Create or edit a Web Service"
+            },
+            "created": "A new Web Service is created with identifier {{ param }}",
+            "updated": "A Web Service is updated with identifier {{ param }}",
+            "deleted": "A Web Service is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Web Service {{ id }}?"
+            },
+            "detail": {
+                "title": "Web Service"
+            },
+            "name": "Name",
+            "url": "Url",
+            "method": "Method"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "northMuseApp": {
+        "WsHttpMethod" : {
+            "null": "",
+            "GET": "GET",
+            "POST": "POST"
+        }
+    }
+}

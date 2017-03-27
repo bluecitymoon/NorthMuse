@@ -1,0 +1,23 @@
+{
+    "northMuseApp": {
+        "webService" : {
+            "home": {
+                "title": "Web Services",
+                "createLabel": "建立一筆新的 Web Service",
+                "createOrEditLabel": "建立或編輯 Web Service"
+            },
+            "created": "新的 Web Service 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Web Service 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Web Service 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Web Service {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Web Service"
+            },
+            "name": "Name",
+            "url": "Url",
+            "method": "Method"
+        }
+    }
+}

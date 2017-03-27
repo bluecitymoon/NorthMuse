@@ -10,6 +10,7 @@
     <include file="classpath:config/liquibase/changelog/20170322081525_added_entity_UrlParameter.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170327030210_added_entity_Robot.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170327055955_added_entity_DouBanMovieTag.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170327075521_added_entity_WebService.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="classpath:config/liquibase/changelog/20170322080858_added_entity_constraints_WebSiteUrl.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170322081525_added_entity_constraints_UrlParameter.xml" relativeToChangelogFile="false"/>
