@@ -5,9 +5,9 @@
         .module('northMuseApp')
         .controller('WebSiteDetailController', WebSiteDetailController);
 
-    WebSiteDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'WebSite', 'WebSiteUrl'];
+    WebSiteDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'WebSite', 'WebSiteUrl', 'UrlParameter', 'AlertService'];
 
-    function WebSiteDetailController($scope, $rootScope, $stateParams, previousState, entity, WebSite, WebSiteUrl) {
+    function WebSiteDetailController($scope, $rootScope, $stateParams, previousState, entity, WebSite, WebSiteUrl, UrlParameter, AlertService) {
         var vm = this;
 
         vm.webSite = entity;
@@ -41,10 +41,39 @@
         vm.saveUrl = function (l) {
 
             console.debug(l);
+
             var webSiteUrl = {
+                webSite: vm.webSite,
+                rootAddress:  l.rootUrl,
+                fullAddress: l.request.url,
+                name: l.urlPath
+            };
+
+            WebSiteUrl.save(webSiteUrl).$promise.then(websiteUrlSavedSuccess, websiteUrlSavedFailure);
+
+            function websiteUrlSavedSuccess(data) {
+
+                console.debug(data);
+
+                AlertService.success("Url " + data.id + "saved");
+
+                angular.forEach(l.request.queryString, function (param) {
+                    var parameter = {
+                        paramKey: param.name,
+                        paramValue: param.value,
+                        defaultValue: param.value,
+                        webSiteUrl: data
+                    };
+
+                    UrlParameter.save(parameter).$promise.then(function (data) {
+                        AlertService.success("Parameter " + data.paramKey + "saved");
+                    })
+                });
 
             }
+            function websiteUrlSavedFailure(data) {
 
+            }
         };
 
         $scope.extensionFilter = {

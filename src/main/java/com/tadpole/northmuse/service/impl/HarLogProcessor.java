@@ -5,6 +5,7 @@ import com.tadpole.northmuse.vo.RequestType;
 import com.tadpole.northmuse.vo.ResourceTarget;
 import de.sstoehr.harreader.model.HarEntry;
 import de.sstoehr.harreader.model.HarLog;
+import org.apache.commons.lang3.StringUtils;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -46,6 +47,13 @@ public class HarLogProcessor {
 
                 String path = requestRealUrl.getPath();
                 resourceTarget.setUrlPath(path);
+
+                StringBuilder root = new StringBuilder(requestRealUrl.getProtocol() + "://" + requestRealUrl.getHost());
+                if (requestRealUrl.getPort() > 0) {
+                    root.append(":" + requestRealUrl.getPort());
+                }
+
+                resourceTarget.setRootUrl(root.toString());
 
             } catch (MalformedURLException e) {
                 e.printStackTrace();

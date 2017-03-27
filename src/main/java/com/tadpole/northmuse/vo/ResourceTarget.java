@@ -21,5 +21,6 @@ public class ResourceTarget {
     private String serverIPAddress;
     private RequestType requestType;
     private String urlPath;
+    private String rootUrl;
 
 }

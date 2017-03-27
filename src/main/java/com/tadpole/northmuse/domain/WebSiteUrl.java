@@ -24,7 +24,7 @@ public class WebSiteUrl implements Serializable {
     @Column(name = "root_address")
     private String rootAddress;
 
-    @Column(name = "full_address")
+    @Column(name = "full_address", length = 5000)
     private String fullAddress;
 
     @Column(name = "name")
