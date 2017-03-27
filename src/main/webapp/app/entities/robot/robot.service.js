@@ -36,6 +36,11 @@
                     copy.createDate = DateUtils.convertLocalDateToServer(copy.createDate);
                     return angular.toJson(copy);
                 }
+            },
+            'start': {
+                method: 'GET',
+                url: 'api/robots/start/:id',
+                params: { id : '@id'}
             }
         });
     }

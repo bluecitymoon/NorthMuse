@@ -3,6 +3,10 @@ package com.tadpole.northmuse.service.impl;
 import com.tadpole.northmuse.service.RobotService;
 import com.tadpole.northmuse.domain.Robot;
 import com.tadpole.northmuse.repository.RobotRepository;
+import com.tadpole.northmuse.util.HttpUtils;
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -10,6 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -20,7 +25,7 @@ import java.util.List;
 public class RobotServiceImpl implements RobotService{
 
     private final Logger log = LoggerFactory.getLogger(RobotServiceImpl.class);
-    
+
     private final RobotRepository robotRepository;
 
     public RobotServiceImpl(RobotRepository robotRepository) {
@@ -42,7 +47,7 @@ public class RobotServiceImpl implements RobotService{
 
     /**
      *  Get all the robots.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
@@ -77,5 +82,18 @@ public class RobotServiceImpl implements RobotService{
     public void delete(Long id) {
         log.debug("Request to delete Robot : {}", id);
         robotRepository.delete(id);
+    }
+
+    @Override
+    public String start(Long id) {
+
+        Robot robot = findOne(id);
+        try {
+           return HttpUtils.newWebClient().getPage(robot.getWebSiteUrl().getFullAddress()).getWebResponse().getContentAsString();
+
+        } catch (IOException e) {
+
+            return e.getMessage();
+        }
     }
 }

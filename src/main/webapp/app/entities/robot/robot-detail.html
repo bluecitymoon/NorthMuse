@@ -5,7 +5,7 @@
         <div class="panel-heading">
             <div class="panel-control">
 
-                <button class="btn btn-primary">启动 &nbsp;<i class="glyphicon glyphicon-play-circle icon-lg"></i></button>
+                <button class="btn btn-primary" ng-click="vm.startRobot()">启动 &nbsp;<i class="glyphicon glyphicon-play-circle icon-lg"></i></button>
 
 
             </div>
@@ -43,4 +43,8 @@
         </div>
     </div>
 </div>
-
+<div class="panel panel-dark panel-colorful" ng-if="vm.cmdMessage">
+    <div class="panel-body">
+        {{vm.cmdMessage}}
+    </div>
+</div>

@@ -12,10 +12,20 @@
 
         vm.robot = entity;
         vm.previousState = previousState.name;
+        vm.startRobot = startRobot;
 
         var unsubscribe = $rootScope.$on('northMuseApp:robotUpdate', function(event, result) {
             vm.robot = result;
         });
+
+        function startRobot() {
+            Robot.start({id: vm.robot.id}).$promise.then(function (data) {
+
+                vm.cmdMessage = data;
+            }, function (error) {
+
+            })
+        }
         $scope.$on('$destroy', unsubscribe);
     }
 })();

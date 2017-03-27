@@ -31,7 +31,7 @@ public class RobotResource {
     private final Logger log = LoggerFactory.getLogger(RobotResource.class);
 
     private static final String ENTITY_NAME = "robot";
-        
+
     private final RobotService robotService;
 
     public RobotResource(RobotService robotService) {
@@ -109,6 +109,22 @@ public class RobotResource {
         log.debug("REST request to get Robot : {}", id);
         Robot robot = robotService.findOne(id);
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(robot));
+    }
+
+    /**
+     * GET  /robots/:id : get the "id" robot.
+     *
+     * @param id the id of the robot to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the robot, or with status 404 (Not Found)
+     */
+    @GetMapping("/robots/start/{id}")
+    @Timed
+    public ResponseEntity<String> startRobot(@PathVariable Long id) {
+        log.debug("REST request to start Robot : {}", id);
+
+        String response = robotService.start(id);
+
+        return ResponseEntity.ok(response);
     }
 
     /**
