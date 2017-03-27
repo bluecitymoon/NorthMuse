@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "tag",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170327055955",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "dou_ban_movie_tag",
+    "pagination": "pagination"
+}

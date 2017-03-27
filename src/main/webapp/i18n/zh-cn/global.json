@@ -11,6 +11,7 @@
                 "webSiteUrl": "Web Site Url",
                 "urlParameter": "Url Parameter",
                 "robot": "Robot",
+                "douBanMovieTag": "Dou Ban Movie Tag",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

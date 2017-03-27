@@ -1,0 +1,21 @@
+{
+    "northMuseApp": {
+        "douBanMovieTag" : {
+            "home": {
+                "title": "Dou Ban Movie Tags",
+                "createLabel": "Create a new Dou Ban Movie Tag",
+                "createOrEditLabel": "Create or edit a Dou Ban Movie Tag"
+            },
+            "created": "A new Dou Ban Movie Tag is created with identifier {{ param }}",
+            "updated": "A Dou Ban Movie Tag is updated with identifier {{ param }}",
+            "deleted": "A Dou Ban Movie Tag is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Dou Ban Movie Tag {{ id }}?"
+            },
+            "detail": {
+                "title": "Dou Ban Movie Tag"
+            },
+            "tag": "Tag"
+        }
+    }
+}
