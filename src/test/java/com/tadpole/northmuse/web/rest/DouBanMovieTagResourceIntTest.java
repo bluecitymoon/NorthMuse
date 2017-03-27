@@ -80,8 +80,8 @@ public class DouBanMovieTagResourceIntTest {
      * if they test an entity which requires the current entity.
      */
     public static DouBanMovieTag createEntity(EntityManager em) {
-        DouBanMovieTag douBanMovieTag = new DouBanMovieTag()
-                .tag(DEFAULT_TAG);
+        DouBanMovieTag douBanMovieTag =  DouBanMovieTag.builder()
+                .tag(DEFAULT_TAG).build();
         return douBanMovieTag;
     }
 
@@ -115,7 +115,8 @@ public class DouBanMovieTagResourceIntTest {
         int databaseSizeBeforeCreate = douBanMovieTagRepository.findAll().size();
 
         // Create the DouBanMovieTag with an existing ID
-        DouBanMovieTag existingDouBanMovieTag = new DouBanMovieTag();
+        DouBanMovieTag existingDouBanMovieTag = DouBanMovieTag.builder()
+            .tag(DEFAULT_TAG).build();
         existingDouBanMovieTag.setId(1L);
 
         // An entity with an existing ID cannot be created, so this API call must fail
