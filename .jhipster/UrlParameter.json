@@ -6,6 +6,12 @@
             "otherEntityName": "webSiteUrl",
             "relationshipType": "many-to-one",
             "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "parameterType",
+            "otherEntityName": "parameterType",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
         }
     ],
     "fields": [

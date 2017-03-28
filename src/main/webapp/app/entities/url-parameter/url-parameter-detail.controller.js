@@ -5,9 +5,9 @@
         .module('northMuseApp')
         .controller('UrlParameterDetailController', UrlParameterDetailController);
 
-    UrlParameterDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'UrlParameter', 'WebSiteUrl'];
+    UrlParameterDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'UrlParameter', 'WebSiteUrl', 'ParameterType'];
 
-    function UrlParameterDetailController($scope, $rootScope, $stateParams, previousState, entity, UrlParameter, WebSiteUrl) {
+    function UrlParameterDetailController($scope, $rootScope, $stateParams, previousState, entity, UrlParameter, WebSiteUrl, ParameterType) {
         var vm = this;
 
         vm.urlParameter = entity;

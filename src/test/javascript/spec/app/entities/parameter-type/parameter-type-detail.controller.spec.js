@@ -2,9 +2,9 @@
 
 describe('Controller Tests', function() {
 
-    describe('UrlParameter Management Detail Controller', function() {
+    describe('ParameterType Management Detail Controller', function() {
         var $scope, $rootScope;
-        var MockEntity, MockPreviousState, MockUrlParameter, MockWebSiteUrl, MockParameterType;
+        var MockEntity, MockPreviousState, MockParameterType;
         var createController;
 
         beforeEach(inject(function($injector) {
@@ -12,8 +12,6 @@ describe('Controller Tests', function() {
             $scope = $rootScope.$new();
             MockEntity = jasmine.createSpy('MockEntity');
             MockPreviousState = jasmine.createSpy('MockPreviousState');
-            MockUrlParameter = jasmine.createSpy('MockUrlParameter');
-            MockWebSiteUrl = jasmine.createSpy('MockWebSiteUrl');
             MockParameterType = jasmine.createSpy('MockParameterType');
             
 
@@ -22,19 +20,17 @@ describe('Controller Tests', function() {
                 '$rootScope': $rootScope,
                 'entity': MockEntity,
                 'previousState': MockPreviousState,
-                'UrlParameter': MockUrlParameter,
-                'WebSiteUrl': MockWebSiteUrl,
                 'ParameterType': MockParameterType
             };
             createController = function() {
-                $injector.get('$controller')("UrlParameterDetailController", locals);
+                $injector.get('$controller')("ParameterTypeDetailController", locals);
             };
         }));
 
 
         describe('Root Scope Listening', function() {
             it('Unregisters root scope listener upon scope destruction', function() {
-                var eventType = 'northMuseApp:urlParameterUpdate';
+                var eventType = 'northMuseApp:parameterTypeUpdate';
 
                 createController();
                 expect($rootScope.$$listenerCount[eventType]).toEqual(1);

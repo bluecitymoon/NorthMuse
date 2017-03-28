@@ -33,6 +33,9 @@ public class UrlParameter implements Serializable {
     @ManyToOne
     private WebSiteUrl webSiteUrl;
 
+    @ManyToOne
+    private ParameterType parameterType;
+
     public Long getId() {
         return id;
     }
@@ -91,6 +94,19 @@ public class UrlParameter implements Serializable {
 
     public void setWebSiteUrl(WebSiteUrl webSiteUrl) {
         this.webSiteUrl = webSiteUrl;
+    }
+
+    public ParameterType getParameterType() {
+        return parameterType;
+    }
+
+    public UrlParameter parameterType(ParameterType parameterType) {
+        this.parameterType = parameterType;
+        return this;
+    }
+
+    public void setParameterType(ParameterType parameterType) {
+        this.parameterType = parameterType;
     }
 
     @Override

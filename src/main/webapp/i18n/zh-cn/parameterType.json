@@ -1,0 +1,22 @@
+{
+    "northMuseApp": {
+        "parameterType" : {
+            "home": {
+                "title": "Parameter Types",
+                "createLabel": "Create a new Parameter Type",
+                "createOrEditLabel": "Create or edit a Parameter Type"
+            },
+            "created": "A new Parameter Type is created with identifier {{ param }}",
+            "updated": "A Parameter Type is updated with identifier {{ param }}",
+            "deleted": "A Parameter Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Parameter Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Parameter Type"
+            },
+            "name": "Name",
+            "identifier": "Identifier"
+        }
+    }
+}

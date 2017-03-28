@@ -13,6 +13,7 @@
                 "robot": "Robot",
                 "douBanMovieTag": "Dou Ban Movie Tag",
                 "webService": "Web Service",
+                "parameterType": "Parameter Type",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

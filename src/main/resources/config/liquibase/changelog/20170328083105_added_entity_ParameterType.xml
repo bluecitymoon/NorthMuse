@@ -15,30 +15,18 @@
     <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
 
     <!--
-        Added the entity UrlParameter.
+        Added the entity ParameterType.
     -->
-    <changeSet id="20170322081525-1" author="jhipster">
-        <createTable tableName="url_parameter">
+    <changeSet id="20170328083105-1" author="jhipster">
+        <createTable tableName="parameter_type">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="param_key" type="varchar(255)">
+            <column name="name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
 
-            <column name="param_value" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="default_value" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="web_site_url_id" type="bigint">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="parameter_type_id" type="bigint">
+            <column name="identifier" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
 

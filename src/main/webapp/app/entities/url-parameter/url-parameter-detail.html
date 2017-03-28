@@ -20,6 +20,10 @@
         <dd>
             <a ui-sref="web-site-url-detail({id:vm.urlParameter.webSiteUrl.id})">{{vm.urlParameter.webSiteUrl.name}}</a>
         </dd>
+        <dt><span data-translate="northMuseApp.urlParameter.parameterType">Parameter Type</span></dt>
+        <dd>
+            <a ui-sref="parameter-type-detail({id:vm.urlParameter.parameterType.id})">{{vm.urlParameter.parameterType.name}}</a>
+        </dd>
     </dl>
 
     <button type="submit"

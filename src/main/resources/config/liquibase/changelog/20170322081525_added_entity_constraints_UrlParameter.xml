@@ -14,5 +14,11 @@
                                  referencedColumnNames="id"
                                  referencedTableName="web_site_url"/>
 
+        <addForeignKeyConstraint baseColumnNames="parameter_type_id"
+                                 baseTableName="url_parameter"
+                                 constraintName="fk_url_parameter_parameter_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="parameter_type"/>
+
     </changeSet>
 </databaseChangeLog>

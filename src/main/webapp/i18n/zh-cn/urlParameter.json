@@ -18,7 +18,8 @@
             "paramKey": "Param Key",
             "paramValue": "Param Value",
             "defaultValue": "Default Value",
-            "webSiteUrl": "Web Site Url"
+            "webSiteUrl": "Web Site Url",
+            "parameterType": "Parameter Type"
         }
     }
 }

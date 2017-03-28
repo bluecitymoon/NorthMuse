@@ -5,15 +5,16 @@
         .module('northMuseApp')
         .controller('UrlParameterDialogController', UrlParameterDialogController);
 
-    UrlParameterDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'UrlParameter', 'WebSiteUrl'];
+    UrlParameterDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'UrlParameter', 'WebSiteUrl', 'ParameterType'];
 
-    function UrlParameterDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, UrlParameter, WebSiteUrl) {
+    function UrlParameterDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, UrlParameter, WebSiteUrl, ParameterType) {
         var vm = this;
 
         vm.urlParameter = entity;
         vm.clear = clear;
         vm.save = save;
         vm.websiteurls = WebSiteUrl.query();
+        vm.parametertypes = ParameterType.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
