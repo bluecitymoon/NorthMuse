@@ -26,7 +26,7 @@
 
                 vm.cmdMessage.push("Handle target successfully 👌 👌 👌 👌 👌 with response: ⏬");
 
-                vm.cmdMessage.push(data);
+                vm.cmdMessage.push(JSON.stringify(data));
 
                 var webService = vm.robot.webService;
                 if (webService) {
@@ -35,7 +35,7 @@
                     RobotHandler.send(data, webService).then(function (data) {
 
                         vm.cmdMessage.push("sent successfully");
-                        vm.cmdMessage.push(data);
+                        vm.cmdMessage.push(JSON.stringify(data));
 
                     }, function (error) {
                         vm.cmdMessage.push("sent failed");
@@ -48,7 +48,7 @@
 
                 vm.cmdMessage.push("Handle target failed ❗️ ❗️ ❗️ ❗️ ❗️ ❗️ with response: ⏬");
 
-                vm.cmdMessage.push(data);
+                vm.cmdMessage.push(error);
             })
         }
         $scope.$on('$destroy', unsubscribe);

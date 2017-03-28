@@ -43,10 +43,9 @@
         </div>
     </div>
 </div>
-<div class="panel panel-dark panel-colorful" ng-if="vm.cmdMessage">
-    <div class="panel-body">
-        <div class="row text-success" ng-repeat="message in vm.cmdMessage">
-            {{message}}
-        </div>
+
+<div ng-if="vm.cmdMessage">
+    <div ng-repeat="message in vm.cmdMessage">
+        <div hljs hljs-source="message" hljs-language="json"></div>
     </div>
 </div>
