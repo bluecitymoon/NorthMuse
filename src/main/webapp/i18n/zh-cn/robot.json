@@ -2,25 +2,25 @@
     "northMuseApp": {
         "robot" : {
             "home": {
-                "title": "Robots",
-                "createLabel": "Create a new Robot",
-                "createOrEditLabel": "Create or edit a Robot"
+                "title": "机器人🤖",
+                "createLabel": "新建机器人",
+                "createOrEditLabel": "管理机器人"
             },
-            "created": "A new Robot is created with identifier {{ param }}",
-            "updated": "A Robot is updated with identifier {{ param }}",
-            "deleted": "A Robot is deleted with identifier {{ param }}",
+            "created": "机器人已创建",
+            "updated": "机器人已修改",
+            "deleted": "机器人已删除",
             "delete": {
-                "question": "Are you sure you want to delete Robot {{ id }}?"
+                "question": "确定消灭这个机器人?"
             },
             "detail": {
-                "title": "Robot"
+                "title": "机器人"
             },
-            "name": "Name",
-            "rDescription": "R Description",
-            "active": "Active",
-            "createDate": "Create Date",
-            "webSiteUrl": "Web Site Url",
-            "webService": "Web Service"
+            "name": "名称",
+            "rDescription": "描述",
+            "active": "是否激活",
+            "createDate": "创建时间",
+            "webSiteUrl": "目标地址",
+            "webService": "数据接收服务"
         }
     }
 }

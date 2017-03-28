@@ -44,7 +44,7 @@
 
             var webSiteUrl = {
                 webSite: vm.webSite,
-                rootAddress:  l.rootUrl,
+                rootAddress:  l.rootUrl + l.urlPath,
                 fullAddress: l.request.url,
                 name: l.urlPath
             };

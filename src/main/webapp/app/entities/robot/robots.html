@@ -1,22 +1,28 @@
-<div>
-    <h2 data-translate="northMuseApp.robot.home.title">Robots</h2>
-    <jhi-alert></jhi-alert>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-4 no-padding-left">
+<jhi-alert></jhi-alert>
+
+<div class="panel">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <div class="panel-control">
+
+
                 <button class="btn btn-primary" ui-sref="robot.new" >
                     <span class="glyphicon glyphicon-plus"></span>
                     <span  data-translate="northMuseApp.robot.home.createLabel">
                         Create new Robot
                     </span>
                 </button>
+
             </div>
+            <h2 data-translate="northMuseApp.robot.home.title">Robots</h2>
         </div>
     </div>
-    <br/>
-    <div class="table-responsive">
-        <table class="jh-table table table-striped">
-            <thead>
+    <div class="panel-body">
+
+        <br>
+        <div class="table-responsive">
+            <table class="jh-table table table-striped">
+                <thead>
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="name"><span data-translate="northMuseApp.robot.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
@@ -27,14 +33,14 @@
                     <th jh-sort-by="webService.name"><span data-translate="northMuseApp.robot.webService">Web Service</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 <tr ng-repeat="robot in vm.robots track by robot.id">
                     <td><a ui-sref="robot-detail({id:robot.id})">{{robot.id}}</a></td>
                     <td>{{robot.name}}</td>
                     <td>{{robot.rDescription}}</td>
                     <td>{{robot.active}}</td>
-                        <td>{{robot.createDate | date:'mediumDate'}}</td>
+                    <td>{{robot.createDate | date:'mediumDate'}}</td>
                     <td>
                         <a ui-sref="web-site-url-detail({id:robot.webSiteUrl.id})">{{robot.webSiteUrl.name}}</a>
                     </td>
@@ -64,11 +70,12 @@
                         </div>
                     </td>
                 </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="text-center">
-        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
-        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center">
+            <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+            <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+        </div>
     </div>
 </div>
