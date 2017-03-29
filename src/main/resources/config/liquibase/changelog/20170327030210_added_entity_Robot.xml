@@ -38,6 +38,14 @@
                 <constraints nullable="true" />
             </column>
 
+            <column name="execution_wait_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="execution_wait_seconds" type="integer">
+                <constraints nullable="true" />
+            </column>
+
             <column name="web_site_url_id" type="bigint">
                 <constraints nullable="true" />
             </column>

@@ -8,6 +8,8 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
+import com.tadpole.northmuse.domain.enumeration.ExecutionWaitType;
+
 /**
  * A Robot.
  */
@@ -33,6 +35,13 @@ public class Robot implements Serializable {
 
     @Column(name = "create_date")
     private LocalDate createDate;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "execution_wait_type")
+    private ExecutionWaitType executionWaitType;
+
+    @Column(name = "execution_wait_seconds")
+    private Integer executionWaitSeconds;
 
     @ManyToOne
     private WebSiteUrl webSiteUrl;
@@ -100,6 +109,32 @@ public class Robot implements Serializable {
         this.createDate = createDate;
     }
 
+    public ExecutionWaitType getExecutionWaitType() {
+        return executionWaitType;
+    }
+
+    public Robot executionWaitType(ExecutionWaitType executionWaitType) {
+        this.executionWaitType = executionWaitType;
+        return this;
+    }
+
+    public void setExecutionWaitType(ExecutionWaitType executionWaitType) {
+        this.executionWaitType = executionWaitType;
+    }
+
+    public Integer getExecutionWaitSeconds() {
+        return executionWaitSeconds;
+    }
+
+    public Robot executionWaitSeconds(Integer executionWaitSeconds) {
+        this.executionWaitSeconds = executionWaitSeconds;
+        return this;
+    }
+
+    public void setExecutionWaitSeconds(Integer executionWaitSeconds) {
+        this.executionWaitSeconds = executionWaitSeconds;
+    }
+
     public WebSiteUrl getWebSiteUrl() {
         return webSiteUrl;
     }
@@ -154,6 +189,8 @@ public class Robot implements Serializable {
             ", rDescription='" + rDescription + "'" +
             ", active='" + active + "'" +
             ", createDate='" + createDate + "'" +
+            ", executionWaitType='" + executionWaitType + "'" +
+            ", executionWaitSeconds='" + executionWaitSeconds + "'" +
             '}';
     }
 }

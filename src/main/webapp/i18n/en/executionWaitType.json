@@ -1,0 +1,9 @@
+{
+    "northMuseApp": {
+        "ExecutionWaitType" : {
+            "null": "",
+            "fixed": "fixed",
+            "randomInMaxOf": "randomInMaxOf"
+        }
+    }
+}

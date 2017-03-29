@@ -20,7 +20,9 @@
             "active": "是否激活",
             "createDate": "创建时间",
             "webSiteUrl": "目标地址",
-            "webService": "数据接收服务"
+            "webService": "数据接收服务",
+            "executionWaitType": "Execution Wait Type",
+            "executionWaitSeconds": "Execution Wait Seconds"
         }
     }
 }

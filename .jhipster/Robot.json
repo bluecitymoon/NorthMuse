@@ -30,6 +30,15 @@
         {
             "fieldName": "createDate",
             "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "executionWaitType",
+            "fieldType": "ExecutionWaitType",
+            "fieldValues": "fixed,randomInMaxOf"
+        },
+        {
+            "fieldName": "executionWaitSeconds",
+            "fieldType": "Integer"
         }
     ],
     "changelogDate": "20170327030210",

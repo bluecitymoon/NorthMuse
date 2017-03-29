@@ -41,6 +41,19 @@
                     </span>
                 </div>
         </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="northMuseApp.robot.executionWaitType" for="field_executionWaitType">Execution Wait Type</label>
+            <select class="form-control" name="executionWaitType" ng-model="vm.robot.executionWaitType" id="field_executionWaitType">
+                <option value="fixed" data-translate="northMuseApp.ExecutionWaitType.fixed">fixed</option>
+                <option value="randomInMaxOf" data-translate="northMuseApp.ExecutionWaitType.randomInMaxOf">randomInMaxOf</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="northMuseApp.robot.executionWaitSeconds" for="field_executionWaitSeconds">Execution Wait Seconds</label>
+            <input type="number" class="form-control" name="executionWaitSeconds" id="field_executionWaitSeconds"
+                    ng-model="vm.robot.executionWaitSeconds"
+                    />
+        </div>
 
         <div class="form-group">
             <label data-translate="northMuseApp.robot.webSiteUrl" for="field_webSiteUrl">Web Site Url</label>

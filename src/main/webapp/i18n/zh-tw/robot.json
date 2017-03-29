@@ -19,6 +19,8 @@
             "rDescription": "R Description",
             "active": "Active",
             "createDate": "Create Date",
+            "executionWaitType": "Execution Wait Type",
+            "executionWaitSeconds": "Execution Wait Seconds",
             "webSiteUrl": "Web Site Url",
             "webService": "Web Service"
         }
